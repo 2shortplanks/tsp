@@ -4,6 +4,8 @@ from django.conf.urls.defaults import *
 from django.contrib import admin
 admin.autodiscover();
 
+import os
+
 # some of the more basic pages just go straight to a template
 from django.views.generic.simple import *
 
@@ -21,4 +23,9 @@ urlpatterns = patterns('',
     # the homepage and other simple pages
     (r'^$', direct_to_template, { 'template': 'index.html' }),
     (r'^about', direct_to_template, { 'template': 'about.html' }),
+    
+    # static file serving.  This is bad, and wrong, but in production this entire url path
+    # will not be proxied by the webserver, so it doesn't matter
+    (r'^static/(?P<path>.*)$', 'django.views.static.serve',
+            {'document_root': os.path.join(os.path.dirname(__file__), 'static').replace('\\','/')}),
 )
