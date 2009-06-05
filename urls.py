@@ -22,7 +22,7 @@ urlpatterns = patterns('',
     
     # the homepage and other simple pages
     (r'^$', direct_to_template, { 'template': 'index.html' }),
-    (r'^about', direct_to_template, { 'template': 'about.html' }),
+    (r'^about/$', direct_to_template, { 'template': 'about.html' }),
     
     # static file serving.  This is bad, and wrong, but in production this entire url path
     # will not be proxied by the webserver, so it doesn't matter
