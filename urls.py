@@ -24,6 +24,9 @@ urlpatterns = patterns('',
     (r'^$', direct_to_template, { 'template': 'index.html' }),
     (r'^about/$', direct_to_template, { 'template': 'about.html' }),
     
+    # the various subprojects
+    (r'projects/', include('tsp.projects.urls')),
+    
     # static file serving.  This is bad, and wrong, but in production this entire url path
     # will not be proxied by the webserver, so it doesn't matter
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
