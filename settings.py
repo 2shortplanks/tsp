@@ -4,7 +4,6 @@ import os
 
 from localsettings import *
 
-DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
