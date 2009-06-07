@@ -9,6 +9,8 @@ import os
 # some of the more basic pages just go straight to a template
 from django.views.generic.simple import *
 
+from views import *
+
 urlpatterns = patterns('',
     # Example:
     # (r'^tsp/', include('tsp.foo.urls')),
@@ -21,8 +23,8 @@ urlpatterns = patterns('',
     (r'^admin/(.*)', admin.site.root),
     
     # the homepage and other simple pages
-    (r'^$', direct_to_template, { 'template': 'index.html' }),
-    (r'^about/$', direct_to_template, { 'template': 'about.html' }),
+    (r'^$', index),
+    (r'^about/$', about),
     
     # the various subprojects
     (r'projects/', include('tsp.projects.urls')),
