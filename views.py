@@ -7,5 +7,7 @@ def index(request):
     return direct_to_template(request, "index.html")
 
 def about(request):
-    return direct_to_template(request, "about.html", { 'breadcrumb': [ home, { 'title': "About" } ] })
+    return direct_to_template(request, "about.html", {
+       'breadcrumb': [ home, { 'title': "About" } ] 
+    })
 
