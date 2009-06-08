@@ -21,9 +21,14 @@
       <div id="tagline">
         The Personal Website of <a href="/about/">Mark Fowler</a>
       </div>
-      <!-- <div id="breadcrumb">
-        <a class="crumb" href="/">Home</a> &#8594; <a href="/projects" class="crumb">Projects</a> &#8594; <a href="/projects/perl" class="crumb">Perl Modules</a> &#8594;<span class="crumb">Most::Utils</span>
-      </div> -->
+      {% if breadcrumb %}
+      <div id="breadcrumb">
+        {% for thing in breadcrumb %}
+          {% if not loop.first %}&#8594;{% endif %}
+          <{% if loop.last %}span{% else %}a href="{{ thing.link }}"{% endif %} class="crumb">{{ thing.title }}</{% if loop.last %}span{% else %}a{% endif %}>
+        {% endfor %}
+      </div>  
+      {% endif %}
     </div>  
 
     <div id="content">
