@@ -1,0 +1,250 @@
+[
+   {
+      "fields" : {
+         "parent" : null,
+         "slug" : "perl",
+         "name" : "Perl"
+      },
+      "pk" : 1,
+      "model" : "projects.projectsection"
+   },
+   {
+      "fields" : {
+         "parent" : 1,
+         "slug" : "cpan",
+         "name" : "CPAN Module"
+      },
+      "pk" : 2,
+      "model" : "projects.projectsection"
+   },
+   {
+      "fields" : {
+         "parent" : 1,
+         "slug" : "noncpan",
+         "name" : "Non-CPAN Module"
+      },
+      "pk" : 3,
+      "model" : "projects.projectsection"
+   },
+   {
+      "fields" : {
+         "parent" : 1,
+         "slug" : "perlscript",
+         "name" : "Scripts"
+      },
+      "pk" : 4,
+      "model" : "projects.projectsection"
+   },
+   {
+      "fields" : {
+         "parent" : null,
+         "slug" : "cocoa",
+         "name" : "Mac Apps"
+      },
+      "pk" : 5,
+      "model" : "projects.projectsection"
+   },
+   {
+      "fields" : {
+         "parent" : null,
+         "slug" : "cocoa",
+         "name" : "Python"
+      },
+      "pk" : 6,
+      "model" : "projects.projectsection"
+   },
+   {
+      "fields" : {
+         "parent" : null,
+         "slug" : "cocoa",
+         "name" : "Ruby"
+      },
+      "pk" : 7,
+      "model" : "projects.projectsection"
+   },
+   {
+      "fields" : {
+         "parent" : null,
+         "slug" : "cocoa",
+         "name" : "JavaScript"
+      },
+      "pk" : 8,
+      "model" : "projects.projectsection"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "acme-test-buffy",
+         "name" : "Acme::Test::Buffy",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 1,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "acme-verysign",
+         "name" : "Acme::VerySign",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 2,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "attempt",
+         "name" : "Attempt",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 3,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "file-path-stderr",
+         "name" : "File::Path::Stderr",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 4,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "string-fraction",
+         "name" : "String::Fraction",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 5,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "template-plugin-clone",
+         "name" : "Template::Plugin::Clone",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 6,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "template-plugin-listutil",
+         "name" : "Template::Plugin::ListUtil",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 7,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "template-plugin-textile",
+         "name" : "Template::Plugin::Textile",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 8,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "template-plugin-vmethods",
+         "name" : "Template::Plugin::VMethods",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 9,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "test-database-row",
+         "name" : "Test::DatabaseRow",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 10,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "test-doubleencodedentities",
+         "name" : "Test::DoubleEncodedEntities",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 11,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "test-utf8",
+         "name" : "Test::utf8",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 12,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "tie-datauuid",
+         "name" : "Tie::DataUUID",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 13,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "xml-easy-proceduralwriter",
+         "name" : "XML::Easy::ProceduralWriter",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 14,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "xml-easy-rationalizenamespaceprefix",
+         "name" : "XML::Easy::RationalizeNamespacePrefix",
+         "section" : 2,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 15,
+      "model" : "projects.project"
+   },
+   {
+      "fields" : {
+         "synopsis" : "A perl module",
+         "slug" : "most-util",
+         "name" : "Most::Util",
+         "section" : 3,
+         "pub_date" : "2009-06-11 00:00:00"
+      },
+      "pk" : 16,
+      "model" : "projects.project"
+   }
+]
