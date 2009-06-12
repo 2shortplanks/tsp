@@ -12,17 +12,16 @@ def index(request):
        'breadcrumb': [ home, { 'title': "Projects" } ] 
     })
 
-# there has to be a better way to write this at a url level
-def detail(request, fragment="foo"):
-    try:
-        ps = ProjectSection.objects.get(slug=fragment)
-        return direct_to_template(request, "projects_category_detail.html", {
-           'breadcrumb': [ home, {}, { 'title': ps.name } ] 
-        })
-    except ObjectDoesNotExist:
-        ps = Project.objects.get(slug=fragment)
-        return direct_to_template(request, "projects_project_detail.html", {
-           'breadcrumb': [ home, {}, { 'title': ps.name } ] 
-        })
+def section_detail(request, fragment):
+    ps = ProjectSection.objects.get(slug=fragment)
+    return direct_to_template(request, "projects_category_detail.html", {
+       'breadcrumb': [ home, {}, { 'title': ps.name } ] 
+    })
+
+def project_detail(request, fragment):
+    ps = Project.objects.get(slug=fragment)
+    return direct_to_template(request, "projects_project_detail.html", {
+       'breadcrumb': [ home, {}, { 'title': ps.name } ] 
+    })
 
 
