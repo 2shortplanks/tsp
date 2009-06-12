@@ -7,7 +7,9 @@
 <p>This is my page for just playing around with things.</p>
 
 {% filter markdown %}
-**boo**
+**boo** <i>bar</i>
 {% endfilter %}
+
+{{ text | markdown | safe }}
 
 {% endblock %}

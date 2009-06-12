@@ -12,4 +12,6 @@ def about(request):
     })
 
 def sandbox(request):
-    return direct_to_template(request, "sandbox.html")
+    return direct_to_template(request, "sandbox.html", {
+      'text': "**bobby**",
+    })
