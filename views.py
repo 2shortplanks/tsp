@@ -11,3 +11,5 @@ def about(request):
        'breadcrumb': [ home, { 'title': "About" } ] 
     })
 
+def sandbox(request):
+    return direct_to_template(request, "sandbox.html")

@@ -6,9 +6,6 @@ admin.autodiscover();
 
 import os
 
-# some of the more basic pages just go straight to a template
-from django.views.generic.simple import *
-
 from views import *
 
 urlpatterns = patterns('',
@@ -25,6 +22,7 @@ urlpatterns = patterns('',
     # the homepage and other simple pages
     (r'^$', index),
     (r'^about/$', about),
+    (r'^sandbox/$', sandbox),
     
     # the various subprojects
     (r'projects/', include('tsp.projects.urls')),
