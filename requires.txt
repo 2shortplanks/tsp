@@ -1,0 +1,6 @@
+This requires the following things to be installed.
+
+markdown2: http://code.google.com/p/python-markdown2/
+chouwa: http://bitbucket.org/trevor/chouwa/
+jinja2: http://jinja.pocoo.org/2/
+
