@@ -75,5 +75,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'tsp.versionedassets',
+    'tsp.markdownfilter',
     'tsp.projects',
 )
