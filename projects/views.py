@@ -15,24 +15,16 @@ def index(request):
        'breadcrumb': [ home, { 'title': "Projects" } ] 
     })
 
-def breadcrumb_for_project_section(section):
-    if section.parent:
-        result = breadcrumb_for_project_section(section.parent)
-    else:
-        result = [ home ]
-    result.append({ 'title': section.name, 'link': reverse("projects_section_detail", kwargs={ 'slug': section.slug }) })
-    return result
-
 def section_detail(request, slug):
     ps = get_object_or_404(ProjectSection,slug=slug)
     return direct_to_template(request, "projects/category_detail.html", {
-       'breadcrumb': breadcrumb_for_project_section(ps),
+       'breadcrumb': ps.breadcrumb(),
        'section': ps
     })
 
 def breadcrumb_for_project(project):
     ps = project.section
-    breadcrumb = breadcrumb_for_project_section(ps)
+    breadcrumb = ps.breadcrumb()
     breadcrumb.append({ 'title': project.name, 'link': reverse("projects_section_detail", kwargs={ 'slug': ps.slug }) })
     return breadcrumb
 
