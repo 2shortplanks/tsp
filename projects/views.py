@@ -29,4 +29,9 @@ def project_detail(request, slug):
        'project': proj
     })
 
-
+def project_detail_dev(request, slug):
+    proj = get_object_or_404(Project,slug=slug)
+    return direct_to_template(request, "projects/project_detail_dev.html", {
+       'breadcrumb': proj.dev_breadcrumb(),
+       'project': proj
+    })

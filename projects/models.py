@@ -30,3 +30,7 @@ class Project(models.Model):
         breadcrumb = ps.breadcrumb()
         breadcrumb.append({ 'title': self.name, 'link': reverse("projects_project_detail", kwargs={ 'slug': self.slug }) })
         return breadcrumb
+    def dev_breadcrumb(self):
+        crumb = self.breadcrumb()
+        crumb.append({ 'title': "Dev", 'link': reverse("projects_project_detail_dev", kwargs={ 'slug': self.slug }) })
+        return crumb
