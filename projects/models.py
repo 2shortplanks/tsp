@@ -13,7 +13,7 @@ class ProjectSection(models.Model):
         if self.parent:
             result = self.parent.breadcrumb()
         else:
-            result = [ home ]
+            result = [ home, { 'title': "Projects", 'link': reverse("projects_index") } ]
         result.append({ 'title': self.name, 'link': reverse("projects_section_detail", kwargs={ 'slug': self.slug }) })
         return result
 
