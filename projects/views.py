@@ -22,16 +22,10 @@ def section_detail(request, slug):
        'section': ps
     })
 
-def breadcrumb_for_project(project):
-    ps = project.section
-    breadcrumb = ps.breadcrumb()
-    breadcrumb.append({ 'title': project.name, 'link': reverse("projects_section_detail", kwargs={ 'slug': ps.slug }) })
-    return breadcrumb
-
 def project_detail(request, slug):
     proj = get_object_or_404(Project,slug=slug)
     return direct_to_template(request, "projects/project_detail.html", {
-       'breadcrumb': breadcrumb_for_project(proj),
+       'breadcrumb': proj.breadcrumb(),
        'project': proj
     })
 

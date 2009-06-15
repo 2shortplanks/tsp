@@ -25,3 +25,8 @@ class Project(models.Model):
     section = models.ForeignKey(ProjectSection)
     def __unicode__(self):
         return self.name
+    def breadcrumb(self):
+        ps = self.section
+        breadcrumb = ps.breadcrumb()
+        breadcrumb.append({ 'title': self.name, 'link': reverse("projects_project_detail", kwargs={ 'slug': self.slug }) })
+        return breadcrumb
